@@ -32,7 +32,8 @@ public class C04Person {
         return "이름은" + this.name + "+ 이메일은" + this.email + " 나이는" + this.age;
 
     }
-//    객체 메서드들간의 호출은 문제없이 호출 가능
+///    객체 메서드들간의 호출은 문제없이 호출 가능
+///     객체 메서드는 static 메서드 접근 가능. static은 다 접근 가능
     public void testMethod1(){
         String temp = this.retunPersonInfo()  ;
 

@@ -20,11 +20,11 @@ public class C05Scope {
     }
 
     public static  void  scope1(int v3){ //(원시자료형) call by value: 값을 통한 호출. 값만을 전달
-        v3=30; //원본 여기서 변경x
+        v3=30; //원본 여기서 변경x //값을 변경 -변경시 원본에 상관x
         System.out.println(v3); //30
     }
     public static  void  scope2(C04Person person){ //클래스(객체) //call by reference: 참조의 의한 호출. 힘매모리 주소값 전달
-        person.setName("lee");
+        person.setName("lee"); //주소를 넘기면서 변수가 바뀌어 있다 // 변경 시 원본도 바뀐다
         System.out.println(person.retunPersonInfo()); //name: lee
     }//객체 메모리  자체로 설명?
 }

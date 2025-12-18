@@ -5,12 +5,13 @@ import java.util.List;
 
 public class C08AccountMain {
     public static void main(String[] args) {
-        Account acc = new Account("보내는 사람", "1234", 10000);
+
 
 //        계좌개설(객체생성)
 //        List를 계좌객체를 담는 자료구조로 사용 2,3개
-        List<Account> myList =new ArrayList<>();
-        myList.add(acc);
+        List<Account> myList =new ArrayList<>(); // !!(4)
+        myList.add(new Account("보내는 사람", "1234", 10000)); //이렇게 선언 시 지칭하는 변수 없어서 검색 불가?
+//        myList.add(acc);
         myList.add(new Account("받는 사람", "54321", 10000));
         myList.add(new Account(" 사람", "53423", 10000));
         myList.add(new Account(" 사람2", "23532", 10000));
@@ -28,20 +29,20 @@ public class C08AccountMain {
 
 
 //        객체 정의
-        class Account {
+        class Account { // (1)
     private String name;
     private String accountNumber;
     private long balance; //캡슐화
 
 
-    public Account(String name, String accountNumber, long balance) {
+    public Account(String name, String accountNumber, long balance) { //생성자(2) Constructor
         this.name = name;
         this.accountNumber = accountNumber;
         this.balance = balance; //선언값 넣을거다
     }
 
 
-    public String getName() {
+    public String getName() { //getter(3)
         return name;
     }
 
@@ -69,11 +70,11 @@ public class C08AccountMain {
 
 
     @Override
-    public String toString() {
+    public String toString() {//toString 깔끔하게 하기 위함 //좀 다르네???
         return "이름" + name + "계좌번호" + accountNumber + "잔고" + balance;
     }
 
-    public static void Mehod(List<Account> myList) { //자료형 맞춰줘야한다
+    public static void Mehod(List<Account> myList) { //자료형 맞춰줘야한다 !(!5) //강사님은 list밑에 뒀다
 
         String from = "1234";
         String to = "54321";
@@ -113,3 +114,5 @@ public class C08AccountMain {
 
 
 //Account클래스 - name 계좌주명 (name), 계좌번호(accountNumber-String), 잔고(balance-long)
+
+//setBalance 추가하는 방법으로다가
