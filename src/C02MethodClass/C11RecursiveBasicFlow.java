@@ -39,7 +39,7 @@ public class C11RecursiveBasicFlow {
 
     }
 
-//  객체를 매개변수로 활용한 재귀함수내 변화과정: 객체는 힙메모리를 통해 원본객체가 변경되므로, 재귀함수간에도 값의 변하를 공유.
+//  객체를 매개변수로 활용한 재귀함수내 변화과정: 객체는 힙메모리를 통해 원본객체가 변경되므로, 재귀함수간에도 값의 변화를 공유.
     public static void recur2(List<Integer> myList, int count, int target) {
         if (myList.size()== target) { //size에 원하는 개수만큼 차면 (count와 비슷)
             return;
@@ -47,8 +47,9 @@ public class C11RecursiveBasicFlow {
 
         myList.add(count);
         recur2(myList, count + 1, target); ////f3에서 [0,1,2]출력 2.f2에서 [0,1,2]출력 3. f1에서 [0,1,2]
-        System.out.println(myList);
+        System.out.println(myList); //실시간으로 객체..//그냥 값에 추가되는거랑 다르다
         myList.remove(myList.size()-1);
 
     }
 }
+//끝나는 로직이 꼭있어야 한다- 보통 맨 앞

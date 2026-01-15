@@ -127,3 +127,4 @@ public class C13RecursiveCombiPermu {
 
 }
 
+/////combi 매개변수 설정하는 방법

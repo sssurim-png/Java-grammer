@@ -56,6 +56,8 @@ public class C13_2Recursive {
 //        combi(new ArrayList<>(), 0, myList, 4, doubleList); //원본, 2개짜리 조합, 조합을 담을 이중리스트
 //        System.out.println(doubleList);
 
+
+        /// //순열
         List<Integer> myList = new ArrayList<>();
         myList.add(1);
         myList.add(2);
@@ -125,3 +127,5 @@ public class C13_2Recursive {
     }
 }
 
+//////언제 재귀함수를쓰는가? dp써도 되는데??
+////// --깊이를 알 수 없을 때, ex.for을 몇개 써야되는지 모를 때. N개짜리 숫자조합을 구해라
